@@ -1,7 +1,11 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+
+dotenv .config();
 
 const connectDB=()=>{
-    mongoose.connect("mongodb+srv://Arvindrawat:261098@cluster0.dtxqf7m.mongodb.net/Proshop?retryWrites=true&w=majority")
+    mongoose.connect(process.env.MONGO_URI)
     .then(res=>console.log("connected to mongoDB".bgBlue))
 }
 export default connectDB;
