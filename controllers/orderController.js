@@ -1,5 +1,5 @@
 import expressAsyncHandler from "express-async-handler";
-import Order from "../models/OrderModel.js";
+import Order from "../Models/OrderModel.js";
 
 const getOrders = expressAsyncHandler(async (req, res, next) => {
   try {
